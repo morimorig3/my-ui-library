@@ -1,1 +1,15 @@
 @import "tailwindcss" source('../');
+
+@theme {
+  --animate-gradient: gradient-move 8s ease infinite;
+
+  @keyframes gradient-move {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+}

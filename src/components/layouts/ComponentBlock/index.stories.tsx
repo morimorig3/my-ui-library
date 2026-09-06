@@ -12,9 +12,7 @@ const meta = {
   decorators: [
     (Story) => (
       <div className="w-80 h-80">
-        <ComponentBlock>
-          <Story />
-        </ComponentBlock>
+        <Story />
       </div>
     ),
   ],
@@ -26,5 +24,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: <ToggleButton />,
+    name: "Toggle Button",
   },
 };
