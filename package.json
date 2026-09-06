@@ -15,25 +15,41 @@
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "check": "oxfmt && oxlint --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-router": "^1.170.32",
     "@tanstack/react-start": "^1.168.49",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/addon-onboarding": "^10.6.0",
+    "@storybook/addon-vitest": "^10.6.0",
+    "@storybook/tanstack-react": "^10.6.0",
+    "@tanstack/react-query": "latest",
     "@types/node": "^26.4.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
     "husky": "^9.1.7",
     "lint-staged": "^17.4.1",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
+    "playwright": "latest",
+    "storybook": "^10.6.0",
     "typescript": "^7.0.2",
-    "vite": "^8.2.2"
+    "vite": "^8.2.2",
+    "vitest": "latest"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,mjs,cjs,css,html,json}": "pnpm run check"

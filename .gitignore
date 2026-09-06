@@ -94,3 +94,6 @@ vite.config.ts.timestamp_*
 benchmarks/memory/**/.profiles/
 
 src/routeTree.gen.ts
+*storybook.log
+storybook-static
+src/stories_examples/**

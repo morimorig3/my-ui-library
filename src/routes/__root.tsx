@@ -1,5 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { ReactNode } from "react";
+import { GlobalLayout } from "../components/layouts/GlobalLayout";
+import appCss from "../styles/app.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -15,6 +17,7 @@ export const Route = createRootRoute({
         title: "UIらいぶらり",
       },
     ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   component: RootComponent,
 });
@@ -22,7 +25,9 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <RootDocument>
-      <Outlet />
+      <GlobalLayout>
+        <Outlet />
+      </GlobalLayout>
     </RootDocument>
   );
 }
