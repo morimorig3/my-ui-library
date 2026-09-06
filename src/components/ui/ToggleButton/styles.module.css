@@ -1,0 +1,37 @@
+.label {
+  display: block;
+  width: 64px;
+  height: 32px;
+  padding: 2px;
+  border-radius: 9999px;
+  border: 1px solid #e8eae9;
+  background-color: #fbfbfb;
+  transition: all 0.3s ease;
+
+  user-select: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 9999px;
+    background-color: #fbfbfb;
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.1),
+      0 4px 0 rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  &:has(.input:checked) {
+    background-color: #86d993;
+    &::after {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.input {
+  display: none;
+}
