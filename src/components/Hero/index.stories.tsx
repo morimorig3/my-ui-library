@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/tanstack-react";
-import { Header } from ".";
+import { Hero } from ".";
 
 const meta = {
-  title: "Layouts/Header",
-  component: Header,
+  title: "Hero",
+  component: Hero,
   tags: ["autodocs"],
   parameters: {
-    layout: "fullscreen",
+    layout: "centered",
   },
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof Hero>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
