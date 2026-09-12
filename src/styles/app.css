@@ -1,15 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap");
 @import "tailwindcss" source('../');
 
 @theme {
-  --animate-gradient: gradient-move 8s ease infinite;
+  --font-kiwi-maru: "Kiwi Maru", serif;
 
-  @keyframes gradient-move {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
+  /* 背景 */
+  --color-bg-primary: #f6f2ea;
+  --color-bg-secondary: #f1ece1;
+  --color-bg-white: #fffdf8;
+
+  /* 文字 */
+  --color-text-black: #2e2a26;
+  --color-text-primary: #6f675e;
+  --color-text-secondary: #5e574f;
+
+  /* 線 */
+  --color-border: #e0d8ca;
+  --color-border-boundary: #e7e0d3;
+  --color-border-ui: #d3cbbd;
+
+  /* アクセント */
+  --color-primary: #2f7d86;
+  --color-primary-pressed: #22636b;
+  --color-primary-hover: #358993;
+  --color-white-hover: #eaf3f4;
+  --color-white-pressed: #bfd8db;
+}
+
+@layer base {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f6f1e7;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='4' result='noise'/%3E%3CfeColorMatrix in='noise' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23F6F2EA'/%3E%3Crect width='100%25' height='100%25' filter='url(%23paperGrain)'/%3E%3C/svg%3E");
+
+    color: #6f675e;
   }
 }

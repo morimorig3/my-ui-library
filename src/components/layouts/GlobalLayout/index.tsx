@@ -8,7 +8,7 @@ export const GlobalLayout = ({ children }: { children: ReactNode }) => {
       <header className={styles.inner}>
         <div className="flex justify-between items-center h-16">
           <Link to="/">
-            <h1 className={`${styles.title} text-2xl`}>やさしいUI</h1>
+            <h1 className="font-kiwi-maru text-2xl text-text-black">やさしいUI</h1>
           </Link>
           <p className="text-sm">触って、なるほどと思うためのサイト</p>
         </div>
@@ -17,9 +17,9 @@ export const GlobalLayout = ({ children }: { children: ReactNode }) => {
         <div>{children}</div>
       </main>
       <footer className={styles.inner}>
-        <div className="flex justify-between items-center py-6 border-t">
-          <span className="text-sm">やさしいUI</span>
-          <span className="text-sm">すこしずつ増えてます</span>
+        <div className="flex justify-between items-center py-6 border-t border-border">
+          <span className="text-sm text-text-sub">やさしいUI</span>
+          <span className="text-sm text-text-sub">すこしずつ増えてます</span>
         </div>
       </footer>
     </div>
