@@ -1,0 +1,206 @@
+.hero {
+  position: relative;
+  display: grid;
+  width: 100vw;
+  height: 300px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  place-items: center;
+}
+
+/* 雲はごくゆっくり右へ流す。速度は 3〜5px/秒 ほどで、
+   じっと見れば動いているとわかる程度にとどめる */
+.sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* 塗りの雲は背景（#f6f2ea）との差が小さすぎて見えないので、
+   紙ヒコーキと同じ線画で描く */
+.cloud {
+  position: absolute;
+  left: 0;
+  animation: cloudDrift linear infinite;
+  will-change: transform;
+}
+
+.cloud path {
+  fill: var(--color-bg-white);
+  stroke: var(--color-text-black);
+}
+
+/* 大きい雲ほど手前にあるものとして速く、小さい雲ほど遠景として遅く流す */
+.cloud1 {
+  top: 10%;
+  width: 120px;
+  opacity: 0.16;
+  animation-name: cloudDrift;
+  animation-duration: 540s;
+  animation-delay: -118s;
+}
+
+.cloud2 {
+  top: 66%;
+  width: 176px;
+  opacity: 0.13;
+  animation-name: cloudDriftAlt;
+  animation-duration: 400s;
+  animation-delay: -120s;
+}
+
+.cloud3 {
+  top: 18%;
+  width: 84px;
+  opacity: 0.2;
+  animation-name: cloudDrift;
+  animation-duration: 760s;
+  animation-delay: -484s;
+}
+
+.cloud4 {
+  top: 74%;
+  width: 144px;
+  opacity: 0.1;
+  animation-name: cloudDriftAlt;
+  animation-duration: 470s;
+  animation-delay: -260s;
+}
+
+/* 横に流れながら、わずかに上下する */
+@keyframes cloudDrift {
+  0% {
+    transform: translate(-30vw, 0);
+  }
+  25% {
+    transform: translate(10vw, -6px);
+  }
+  50% {
+    transform: translate(50vw, 4px);
+  }
+  75% {
+    transform: translate(90vw, -3px);
+  }
+  100% {
+    transform: translate(130vw, 0);
+  }
+}
+
+@keyframes cloudDriftAlt {
+  0% {
+    transform: translate(-30vw, 0);
+  }
+  25% {
+    transform: translate(10vw, 5px);
+  }
+  50% {
+    transform: translate(50vw, -4px);
+  }
+  75% {
+    transform: translate(90vw, 3px);
+  }
+  100% {
+    transform: translate(130vw, 0);
+  }
+}
+
+/* 機体の後方（右下）へ伸びる航跡。破線をゆっくり流す */
+.trail {
+  position: absolute;
+  top: calc(50% + 6px);
+  left: calc(50% + 86px);
+  z-index: 1;
+  width: 300px;
+  height: 100px;
+}
+
+.trail path {
+  animation: trailFlow 6s linear infinite;
+}
+
+@keyframes trailFlow {
+  to {
+    /* dasharray 2 14 の 2 周期ぶん。継ぎ目が出ないようにする */
+    stroke-dashoffset: -32px;
+  }
+}
+
+/* 動きを 3 層に分ける。周期を 13 / 7 / 9 秒と互いに素にすることで、
+   合成の周期が約 14 分になり、同じ動きの繰り返しに気づけなくなる。 */
+.drift {
+  display: block;
+  animation: planeDrift 13s ease-in-out infinite;
+}
+
+.lift {
+  display: block;
+  animation: planeLift 7s ease-in-out infinite;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 200px;
+  transform-origin: 50% 50%;
+  animation: planeBank 9s ease-in-out infinite;
+}
+
+/* 気流に流される横のぶれ */
+@keyframes planeDrift {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-17px, -8px);
+  }
+  55% {
+    transform: translate(13px, 5px);
+  }
+  80% {
+    transform: translate(-8px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* 高度のわずかな上下。上がるときに少しだけ大きく見せる */
+@keyframes planeLift {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-11px) scale(1.022);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 機首の傾きと、紙が風でしなる歪み */
+@keyframes planeBank {
+  0% {
+    transform: rotate(0deg) skewY(0deg);
+  }
+  30% {
+    transform: rotate(-5deg) skewY(1deg);
+  }
+  65% {
+    transform: rotate(4deg) skewY(-0.8deg);
+  }
+  100% {
+    transform: rotate(0deg) skewY(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drift,
+  .lift,
+  .image,
+  .cloud,
+  .trail path {
+    animation: none;
+  }
+}

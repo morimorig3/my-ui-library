@@ -10,7 +10,7 @@ function IndexPage() {
   return (
     <div>
       <Hero />
-      <ul className="grid grid-cols-3 gap-6 max-w-215 mx-auto">
+      <ul className="grid grid-cols-3 gap-6 max-w-215 mx-auto py-16">
         <li>
           <Link to="/ui/button">
             <ComponentCard
