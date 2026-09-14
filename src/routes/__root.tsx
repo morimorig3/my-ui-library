@@ -17,7 +17,10 @@ export const Route = createRootRoute({
         title: "やさしいUI",
       },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico" },
+    ],
   }),
   component: RootComponent,
 });

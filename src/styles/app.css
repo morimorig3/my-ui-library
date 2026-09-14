@@ -1,18 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap");
 @import "tailwindcss" source('../');
 
 @theme {
   --font-kiwi-maru: "Kiwi Maru", serif;
+  --font-zen-kaku: "Zen Kaku Gothic New", sans-serif;
 
   /* 背景 */
   --color-bg-primary: #f6f2ea;
   --color-bg-secondary: #f1ece1;
+  --color-bg-thirdly: #ded6c8;
   --color-bg-white: #fffdf8;
 
   /* 文字 */
   --color-text-black: #2e2a26;
-  --color-text-primary: #6f675e;
-  --color-text-secondary: #5e574f;
+  --color-text-primary: #5e574f;
+  --color-text-secondary: #6f675e;
 
   /* 線 */
   --color-border: #e0d8ca;
@@ -29,12 +31,11 @@
 
 @layer base {
   body {
+    @apply text-base text-text-primary font-zen-kaku;
     overflow-x: hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #f6f1e7;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='4' result='noise'/%3E%3CfeColorMatrix in='noise' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23F6F2EA'/%3E%3Crect width='100%25' height='100%25' filter='url(%23paperGrain)'/%3E%3C/svg%3E");
-
-    color: #6f675e;
   }
 }
