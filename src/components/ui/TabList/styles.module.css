@@ -1,0 +1,16 @@
+.tab {
+  anchor-name: var(--tab-anchor-name);
+}
+
+.indicator {
+  position-anchor: var(--tab-position-anchor);
+  top: anchor(top);
+  left: anchor(left);
+  width: anchor-size(width);
+  height: anchor-size(height);
+  transition:
+    top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
