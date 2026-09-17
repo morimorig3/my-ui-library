@@ -17,55 +17,44 @@
   pointer-events: none;
 }
 
-/* 塗りの雲は背景（#f6f2ea）との差が小さすぎて見えないので、
-   紙ヒコーキと同じ線画で描く */
+/* 角丸の帯だけのシンプルな雲。ぼかしを入れると背景に溶けて見えなくなるので、
+   ベタ塗りのまま opacity で薄くする */
 .cloud {
   position: absolute;
   left: 0;
+  border-radius: 9999px;
+  background: var(--color-bg-white);
+  opacity: 0.55;
   animation: cloudDrift linear infinite;
   will-change: transform;
-}
-
-.cloud path {
-  fill: var(--color-bg-white);
-  stroke: var(--color-text-black);
 }
 
 /* 大きい雲ほど手前にあるものとして速く、小さい雲ほど遠景として遅く流す */
 .cloud1 {
   top: 10%;
-  width: 120px;
-  opacity: 0.16;
+  width: 200px;
+  height: 46px;
   animation-name: cloudDrift;
-  animation-duration: 540s;
-  animation-delay: -118s;
+  animation-duration: 400s;
+  animation-delay: -87s;
 }
 
 .cloud2 {
   top: 66%;
-  width: 176px;
-  opacity: 0.13;
+  width: 150px;
+  height: 36px;
   animation-name: cloudDriftAlt;
-  animation-duration: 400s;
-  animation-delay: -120s;
+  animation-duration: 540s;
+  animation-delay: -162s;
 }
 
 .cloud3 {
   top: 18%;
-  width: 84px;
-  opacity: 0.2;
+  width: 120px;
+  height: 28px;
   animation-name: cloudDrift;
   animation-duration: 760s;
   animation-delay: -484s;
-}
-
-.cloud4 {
-  top: 74%;
-  width: 144px;
-  opacity: 0.1;
-  animation-name: cloudDriftAlt;
-  animation-duration: 470s;
-  animation-delay: -260s;
 }
 
 /* 横に流れながら、わずかに上下する */

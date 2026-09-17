@@ -1,31 +1,14 @@
 import svgImage from "./paper-plane.svg?url";
 import styles from "./styles.module.css";
 
-const Cloud = ({ className }: { className: string }) => (
-  <svg
-    className={`${styles.cloud} ${className}`}
-    viewBox="0 0 120 62"
-    fill="none"
-    aria-hidden="true"
-  >
-    <path
-      d="M18 54C6 54 1 42 12 37C8 24 22 15 33 22C39 7 64 5 71 20C84 11 102 20 101 34C114 35 117 52 104 54Z"
-      strokeWidth="1.5"
-      strokeLinejoin="round"
-      vectorEffect="non-scaling-stroke"
-    />
-  </svg>
-);
-
 export const Hero = () => {
   return (
     <section>
       <div className={styles.hero}>
         <div className={styles.sky} aria-hidden="true">
-          <Cloud className={styles.cloud1} />
-          <Cloud className={styles.cloud2} />
-          <Cloud className={styles.cloud3} />
-          <Cloud className={styles.cloud4} />
+          <span className={`${styles.cloud} ${styles.cloud1}`} />
+          <span className={`${styles.cloud} ${styles.cloud2}`} />
+          <span className={`${styles.cloud} ${styles.cloud3}`} />
         </div>
         <svg className={styles.trail} viewBox="0 0 300 100" fill="none" aria-hidden="true">
           <defs>
