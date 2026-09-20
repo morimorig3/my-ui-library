@@ -20,11 +20,11 @@ export const DescriptionItem = ({ title, description, children }: Props) => {
   return (
     <div className="rounded-2xl bg-bg-white py-5 px-5.5">
       <p className="font-kiwi-maru text-text-black mb-2">{title}</p>
-      <p className="text-sm">{description}</p>
+      <p className="leading-loose">{description}</p>
       {children && (
         <>
           <input type="checkbox" id={toggleId} className={styles.toggle} onChange={handleToggle} />
-          <div ref={textRef} className={`text-sm leading-loose mb-2 ${styles.text}`}>
+          <div ref={textRef} className={`leading-loose mb-2 ${styles.text}`}>
             {children}
           </div>
           <label htmlFor={toggleId} className={`text-sm text-primary ${styles.label}`}>
