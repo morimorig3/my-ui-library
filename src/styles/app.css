@@ -6,9 +6,11 @@
   --font-zen-kaku: "Zen Kaku Gothic New", sans-serif;
 
   /* 背景 */
+  /* だんだん暗くなる */
   --color-bg-primary: #f6f2ea;
   --color-bg-secondary: #f1ece1;
-  --color-bg-thirdly: #ded6c8;
+  --color-bg-thirdly: #e9e2d5;
+  --color-bg-fouthly: #ded6c8;
   --color-bg-white: #fffdf8;
 
   /* 文字 */

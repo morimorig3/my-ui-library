@@ -24,7 +24,7 @@ export const TabList = ({ labels }: Props) => {
         <label
           key={index}
           className={`relative z-10 text-center whitespace-nowrap px-4 py-2 rounded-full transition-colors ${styles.tab}
-          ${selected === index ? "text-primary" : "cursor-pointer hover:bg-bg-thirdly"}`}
+          ${selected === index ? "text-primary" : "cursor-pointer hover:bg-bg-fouthly"}`}
           style={
             {
               "--tab-anchor-name": `--tab-${index}`,
