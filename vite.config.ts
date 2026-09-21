@@ -26,7 +26,9 @@ export default defineConfig({
       },
     }),
     // react's vite plugin must come after start's vite plugin
-    viteReact(),
+    viteReact({
+      compiler: { target: "19", logDiagnostics: true },
+    }),
   ],
   test: {
     projects: [

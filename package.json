@@ -45,6 +45,7 @@
     "@vitest/coverage-v8": "latest",
     "husky": "^9.1.7",
     "lint-staged": "^17.4.1",
+    "oxc-transform-react": "^0.150.0",
     "oxfmt": "^0.66.0",
     "oxlint": "^1.81.0",
     "playwright": "latest",
