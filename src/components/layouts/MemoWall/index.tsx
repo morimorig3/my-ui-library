@@ -13,7 +13,7 @@ export const MemoWall = ({ subTitle, title, children }: Props) => {
     <section className={`bg-bg-secondary p-5.5 ${styles["inset-shadow"]}`}>
       <MicroLabel label={subTitle} className="mb-2" />
       <h3 className="font-kiwi-maru text-text-black mb-3">{title}</h3>
-      <div className="text-sm leading-loose max-w-120">{children}</div>
+      <div className="leading-loose max-w-120">{children}</div>
     </section>
   );
 };
