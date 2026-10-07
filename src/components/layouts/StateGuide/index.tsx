@@ -49,7 +49,7 @@ export const StateGuide = ({ items, activeIds = [] }: Props) => {
             </>
           );
           const frame = cn(
-            "h-full w-full border-t-3 rounded-b-xl px-2.5 pt-3 pb-2.5 text-left transition-colors duration-150 motion-reduce:transition-none",
+            "flex h-full w-full flex-col border-t-3 rounded-b-xl px-2.5 pt-3 pb-2.5 text-left transition-colors duration-150 motion-reduce:transition-none",
             active ? "border-primary" : "border-border-boundary",
           );
 
