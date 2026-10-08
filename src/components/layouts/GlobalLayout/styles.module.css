@@ -5,6 +5,8 @@
   grid-template-columns: minmax(0, 1fr) min(1024px, 100%) minmax(0, 1fr);
   padding-left: 32px;
   padding-right: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .inner {

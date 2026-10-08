@@ -16,7 +16,7 @@ export const GlobalLayout = ({ children }: { children: ReactNode }) => {
       <main className={styles.inner}>
         <div>{children}</div>
       </main>
-      <footer className={styles.inner}>
+      <footer className={`mt-16 ${styles.inner}`}>
         <div className="flex justify-between items-center py-6 border-t border-border">
           <span className="text-sm text-text-sub">やさしいUI</span>
           <span className="text-sm text-text-sub">すこしずつ増えてます</span>
