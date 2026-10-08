@@ -12,7 +12,6 @@ build
 */build
 dist
 .output
-lib
 es
 artifacts
 .rpt2_cache
@@ -97,3 +96,7 @@ src/routeTree.gen.ts
 *storybook.log
 storybook-static
 src/stories_examples/**
+
+docs/**/*
+AGENTS.md
+CLAUDE.md
