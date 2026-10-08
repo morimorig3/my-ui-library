@@ -4,6 +4,7 @@ import { ComponentCard } from "../components/ComponentCard";
 import buttonImage from "../assets/images/info-graphic-button.svg?url";
 import checkboxImage from "../assets/images/info-graphic-checkbox.svg?url";
 import radioImage from "../assets/images/info-graphic-radio.svg?url";
+import selectImage from "../assets/images/info-graphic-select.svg?url";
 
 export const Route = createFileRoute("/")({
   component: IndexPage,
@@ -50,6 +51,18 @@ function IndexPage() {
               imageUrl={radioImage}
               name="ラジオボタン"
               description="ひとつだけ選ぶ感じが、わかりやすくなるには。"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/ui/select"
+            className="group block h-full rounded-2xl focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-primary-pressed"
+          >
+            <ComponentCard
+              imageUrl={selectImage}
+              name="セレクトボックス"
+              description="たたんだ一覧から、迷わず選べるには。"
             />
           </Link>
         </li>
