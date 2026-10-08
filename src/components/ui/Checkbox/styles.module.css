@@ -1,0 +1,139 @@
+/* 押せる範囲は、四角だけでなくラベルの行全体 */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 12px 0 10px;
+  border-radius: 10px;
+  color: #2e2a26;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.15s ease;
+
+  &:has(.input:disabled) {
+    color: #a39a8d;
+    cursor: not-allowed;
+  }
+}
+
+.box {
+  position: relative;
+  display: inline-grid;
+  flex: none;
+  width: 22px;
+  height: 22px;
+}
+
+/* 本物の input をそのまま四角として描く */
+.input {
+  grid-area: 1 / 1;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border: 2px solid #6f675e;
+  border-radius: 6px;
+  background-color: #fffdf8;
+  appearance: none;
+  cursor: inherit;
+  transition:
+    background-color 0.12s ease,
+    border-color 0.12s ease;
+
+  &:checked,
+  &:indeterminate {
+    border-color: #2f7d86;
+    background-color: #2f7d86;
+  }
+
+  /* キーボード操作のときだけリングを出す */
+  &:focus-visible {
+    outline: 3px solid #22636b;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    border-color: #cfc6b8;
+    background-color: #f1ece1;
+  }
+
+  &:disabled:checked,
+  &:disabled:indeterminate {
+    border-color: #c4baab;
+    background-color: #c4baab;
+  }
+}
+
+.mark {
+  grid-area: 1 / 1;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  fill: none;
+  stroke: #fffdf8;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 印は、押したとたんに描き始める。外すときはすぐ消す */
+.check {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.input:checked:not(:indeterminate) ~ .mark .check {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.14s ease-out;
+}
+
+.dash {
+  opacity: 0;
+}
+
+.input:indeterminate ~ .mark .dash {
+  opacity: 1;
+}
+
+/* マウスなどホバーできる環境だけで反応させる */
+@media (hover: hover) {
+  .label:hover:not(:has(.input:disabled)) {
+    background-color: #eaf3f4;
+
+    .input:not(:checked, :indeterminate) {
+      border-color: #2e2a26;
+    }
+
+    .input:checked,
+    .input:indeterminate {
+      border-color: #22636b;
+    }
+  }
+}
+
+/* 押している間は、四角の色を少し濃くする */
+.label:active:not(:has(.input:disabled)) {
+  .input:not(:checked, :indeterminate) {
+    background-color: #bfd8db;
+  }
+
+  .input:checked,
+  .input:indeterminate {
+    border-color: #1b4f55;
+    background-color: #1b4f55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .input {
+    transition: none;
+  }
+
+  .input:checked:not(:indeterminate) ~ .mark .check {
+    transition: none;
+  }
+}
