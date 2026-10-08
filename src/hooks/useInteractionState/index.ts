@@ -35,8 +35,9 @@ export const useInteractionState = ({ pressKeys = [" ", "Enter"] }: Options = {}
     onPointerDown: () => update({ pressed: true, focusVisible: false }),
     onPointerUp: () => update({ pressed: false }),
     onPointerCancel: () => update({ pressed: false }),
+    // label に付けたときも、中の input がキーボードで選ばれたかを見る
     onFocus: (e: FocusEvent<HTMLElement>) =>
-      update({ focusVisible: e.currentTarget.matches(":focus-visible") }),
+      update({ focusVisible: e.target.matches(":focus-visible") }),
     onBlur: () => update({ focusVisible: false, pressed: false }),
     onKeyDown: (e: KeyboardEvent) => {
       if (pressKeys.includes(e.key) && !e.repeat) update({ pressed: true });

@@ -38,9 +38,17 @@ export const CompareDemo = ({ options, className }: Props) => {
           </div>
         ))}
       </div>
-      <p className="mx-1 mb-0.5 text-sm leading-relaxed text-text-secondary" aria-live="polite">
-        {option?.caption}
-      </p>
+      {/* 説明も、いちばん長いものに高さを合わせる。読み上げるのは前に重ねた今の説明だけ */}
+      <div className="mx-1 mb-0.5 grid text-sm leading-relaxed text-text-secondary">
+        {options.map((o, index) => (
+          <p key={index} className="invisible [grid-area:1/1]" aria-hidden="true">
+            {o.caption}
+          </p>
+        ))}
+        <p className="[grid-area:1/1]" aria-live="polite">
+          {option?.caption}
+        </p>
+      </div>
     </div>
   );
 };

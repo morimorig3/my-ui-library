@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/tanstack-react";
 import { CompareDemo } from ".";
 import { Button } from "../../ui/Button";
-import { UnpleasantButton } from "../../ui/Button/UnpleasantButton";
 
 const meta = {
   title: "Layouts/CompareDemo",
@@ -32,7 +31,11 @@ export const Default: Story = {
       },
       {
         label: "平ら",
-        content: <UnpleasantButton>送信する</UnpleasantButton>,
+        content: (
+          <button type="button" className="h-12 w-40 font-bold text-text-black">
+            送信する
+          </button>
+        ),
         caption: "手がかりが少ないので、押せる場所かどうか迷います。",
       },
     ],
