@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="152" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="153" width="320" height="200" fill="#FFFDF8"></rect>
+          <path data-dc-tpl="154" d="M80 92 L72 100 L80 108" fill="none" stroke="#C9C0B1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect data-dc-tpl="155" x="93" y="87" width="26" height="26" rx="8" fill="none" stroke="#E4DCCE" stroke-width="2"></rect>
+          <rect data-dc-tpl="156" x="104.5" y="94" width="3" height="12" rx="1.5" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="157" x="128" y="86" width="28" height="28" rx="8" fill="#2F7D86"></rect>
+          <rect data-dc-tpl="158" x="140.5" y="94" width="3" height="12" rx="1.5" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="159" x="165" y="87" width="26" height="26" rx="8" fill="none" stroke="#E4DCCE" stroke-width="2"></rect>
+          <rect data-dc-tpl="160" x="176.5" y="94" width="3" height="12" rx="1.5" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="161" x="201" y="87" width="26" height="26" rx="8" fill="none" stroke="#E4DCCE" stroke-width="2"></rect>
+          <rect data-dc-tpl="162" x="212.5" y="94" width="3" height="12" rx="1.5" fill="#C9C0B1"></rect>
+          <path data-dc-tpl="163" d="M240 92 L248 100 L240 108" fill="none" stroke="#2F7D86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>

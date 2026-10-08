@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="20" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="21" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="22" x="84" y="42" width="160" height="38" rx="19" fill="#EAF3F4"></rect>
+          <circle data-dc-tpl="23" cx="106" cy="61" r="12" fill="none" stroke="#2F7D86" stroke-width="3"></circle>
+          <circle data-dc-tpl="24" cx="106" cy="61" r="6" fill="#2F7D86"></circle>
+          <rect data-dc-tpl="25" x="128" y="57" width="88" height="8" rx="4" fill="#2F7D86" opacity=".55"></rect>
+          <circle data-dc-tpl="26" cx="106" cy="102" r="12" fill="none" stroke="#D3CBBD" stroke-width="3"></circle>
+          <rect data-dc-tpl="27" x="128" y="98" width="68" height="8" rx="4" fill="#E4DCCE"></rect>
+          <circle data-dc-tpl="28" cx="106" cy="143" r="12" fill="none" stroke="#D3CBBD" stroke-width="3"></circle>
+          <rect data-dc-tpl="29" x="128" y="139" width="100" height="8" rx="4" fill="#E4DCCE"></rect>
+        </svg>

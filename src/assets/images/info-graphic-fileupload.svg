@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="203" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="204" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="205" x="70" y="40" width="180" height="120" rx="16" fill="#F4F9F9" stroke="#2F7D86" stroke-width="2.5" stroke-dasharray="7 6"></rect>
+          <path data-dc-tpl="206" d="M160 116 L160 78 M146 92 L160 78 L174 92" fill="none" stroke="#2F7D86" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect data-dc-tpl="207" x="128" y="130" width="64" height="8" rx="4" fill="#C9C0B1"></rect>
+        </svg>

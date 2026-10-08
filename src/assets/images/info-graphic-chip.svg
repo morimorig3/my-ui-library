@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="60" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="61" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="62" x="58" y="66" width="88" height="30" rx="15" fill="#2F7D86"></rect>
+          <path data-dc-tpl="63" d="M71 81 L75 85 L82 76" fill="none" stroke="#FFFDF8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect data-dc-tpl="64" x="90" y="77" width="44" height="8" rx="4" fill="#FFFDF8" opacity=".85"></rect>
+          <rect data-dc-tpl="65" x="155" y="67.5" width="60" height="27" rx="13.5" fill="none" stroke="#D3CBBD" stroke-width="2.5"></rect>
+          <rect data-dc-tpl="66" x="170" y="77" width="30" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="67" x="224" y="67.5" width="40" height="27" rx="13.5" fill="none" stroke="#D3CBBD" stroke-width="2.5"></rect>
+          <rect data-dc-tpl="68" x="236" y="77" width="16" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="69" x="95.5" y="105.5" width="62" height="27" rx="13.5" fill="none" stroke="#D3CBBD" stroke-width="2.5"></rect>
+          <rect data-dc-tpl="70" x="110" y="115" width="33" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="71" x="166" y="104" width="64" height="30" rx="15" fill="#2F7D86"></rect>
+          <path data-dc-tpl="72" d="M179 119 L183 123 L190 114" fill="none" stroke="#FFFDF8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect data-dc-tpl="73" x="198" y="115" width="20" height="8" rx="4" fill="#FFFDF8" opacity=".85"></rect>
+        </svg>

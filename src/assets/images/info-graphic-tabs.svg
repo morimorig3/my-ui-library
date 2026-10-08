@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="120" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="121" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="122" x="78" y="54" width="44" height="8" rx="4" fill="#2F7D86"></rect>
+          <rect data-dc-tpl="123" x="138" y="54" width="44" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="124" x="198" y="54" width="44" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="125" x="66" y="77" width="188" height="2" rx="1" fill="#E4DCCE"></rect>
+          <rect data-dc-tpl="126" x="70" y="75" width="60" height="4" rx="2" fill="#2F7D86"></rect>
+          <rect data-dc-tpl="127" x="66" y="96" width="188" height="68" rx="12" fill="#F6F2EA"></rect>
+          <rect data-dc-tpl="128" x="82" y="112" width="120" height="8" rx="4" fill="#E4DCCE"></rect>
+          <rect data-dc-tpl="129" x="82" y="128" width="150" height="8" rx="4" fill="#E4DCCE"></rect>
+          <rect data-dc-tpl="130" x="82" y="144" width="96" height="8" rx="4" fill="#E4DCCE"></rect>
+        </svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="166" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="167" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="168" x="88" y="30" width="144" height="140" rx="14" fill="#FFFDF8" stroke="#E4DCCE" stroke-width="2"></rect>
+          <rect data-dc-tpl="169" x="88" y="30" width="144" height="30" rx="14" fill="#F1ECE1"></rect>
+          <rect data-dc-tpl="170" x="88" y="46" width="144" height="14" fill="#F1ECE1"></rect>
+          <rect data-dc-tpl="171" x="132" y="41" width="56" height="8" rx="4" fill="#C9C0B1"></rect>
+          <g data-dc-tpl="172" fill="#E4DCCE">
+            <circle data-dc-tpl="173" cx="106" cy="80" r="4"></circle><circle data-dc-tpl="174" cx="124" cy="80" r="4"></circle><circle data-dc-tpl="175" cx="142" cy="80" r="4"></circle><circle data-dc-tpl="176" cx="160" cy="80" r="4"></circle><circle data-dc-tpl="177" cx="178" cy="80" r="4"></circle><circle data-dc-tpl="178" cx="196" cy="80" r="4"></circle><circle data-dc-tpl="179" cx="214" cy="80" r="4"></circle>
+            <circle data-dc-tpl="180" cx="106" cy="102" r="4"></circle><circle data-dc-tpl="181" cx="124" cy="102" r="4"></circle><circle data-dc-tpl="182" cx="142" cy="102" r="4"></circle><circle data-dc-tpl="183" cx="178" cy="102" r="4"></circle><circle data-dc-tpl="184" cx="196" cy="102" r="4"></circle><circle data-dc-tpl="185" cx="214" cy="102" r="4"></circle>
+            <circle data-dc-tpl="186" cx="106" cy="124" r="4"></circle><circle data-dc-tpl="187" cx="124" cy="124" r="4"></circle><circle data-dc-tpl="188" cx="142" cy="124" r="4"></circle><circle data-dc-tpl="189" cx="160" cy="124" r="4"></circle><circle data-dc-tpl="190" cx="178" cy="124" r="4"></circle><circle data-dc-tpl="191" cx="196" cy="124" r="4"></circle><circle data-dc-tpl="192" cx="214" cy="124" r="4"></circle>
+            <circle data-dc-tpl="193" cx="106" cy="146" r="4"></circle><circle data-dc-tpl="194" cx="124" cy="146" r="4"></circle><circle data-dc-tpl="195" cx="142" cy="146" r="4"></circle><circle data-dc-tpl="196" cx="160" cy="146" r="4"></circle>
+          </g>
+          <circle data-dc-tpl="197" cx="160" cy="102" r="11" fill="#2F7D86"></circle>
+          <circle data-dc-tpl="198" cx="160" cy="102" r="3.5" fill="#FFFDF8"></circle>
+        </svg>

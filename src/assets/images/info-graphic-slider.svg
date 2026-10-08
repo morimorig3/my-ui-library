@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="106" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="107" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="108" x="70" y="97" width="180" height="6" rx="3" fill="#E4DCCE"></rect>
+          <rect data-dc-tpl="109" x="70" y="97" width="110" height="6" rx="3" fill="#2F7D86"></rect>
+          <circle data-dc-tpl="110" cx="180" cy="100" r="15" fill="#FFFDF8" stroke="#2F7D86" stroke-width="3"></circle>
+        </svg>

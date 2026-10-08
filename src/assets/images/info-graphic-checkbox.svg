@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="34" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="35" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="36" x="94" y="48" width="26" height="26" rx="8" fill="#2F7D86"></rect>
+          <path data-dc-tpl="37" d="M100.5 61.5 L105.5 66.5 L114 55.5" fill="none" stroke="#FFFDF8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect data-dc-tpl="38" x="134" y="57" width="84" height="8" rx="4" fill="#E4DCCE"></rect>
+          <rect data-dc-tpl="39" x="94" y="89" width="26" height="26" rx="8" fill="#2F7D86"></rect>
+          <path data-dc-tpl="40" d="M100.5 102.5 L105.5 107.5 L114 96.5" fill="none" stroke="#FFFDF8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"></path>
+          <rect data-dc-tpl="41" x="134" y="98" width="64" height="8" rx="4" fill="#E4DCCE"></rect>
+          <rect data-dc-tpl="42" x="95.5" y="131.5" width="23" height="23" rx="7" fill="none" stroke="#D3CBBD" stroke-width="3"></rect>
+          <rect data-dc-tpl="43" x="134" y="139" width="96" height="8" rx="4" fill="#C9C0B1"></rect>
+        </svg>

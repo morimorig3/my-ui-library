@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="138" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="139" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="140" x="70" y="36" width="180" height="44" rx="22" fill="#FFFDF8" stroke="#2F7D86" stroke-width="3"></rect>
+          <circle data-dc-tpl="141" cx="96" cy="56" r="7" fill="none" stroke="#2F7D86" stroke-width="2.6"></circle>
+          <path data-dc-tpl="142" d="M101 61 L106 66" stroke="#2F7D86" stroke-width="2.6" stroke-linecap="round"></path>
+          <rect data-dc-tpl="143" x="116" y="54" width="40" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="144" x="70" y="90" width="180" height="76" rx="12" fill="#FFFDF8" stroke="#E4DCCE" stroke-width="2"></rect>
+          <rect data-dc-tpl="145" x="78" y="98" width="164" height="28" rx="8" fill="#EAF3F4"></rect>
+          <rect data-dc-tpl="146" x="92" y="108" width="34" height="8" rx="4" fill="#2F7D86"></rect>
+          <rect data-dc-tpl="147" x="128" y="108" width="44" height="8" rx="4" fill="#2F7D86" opacity=".4"></rect>
+          <rect data-dc-tpl="148" x="92" y="141" width="34" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="149" x="128" y="141" width="60" height="8" rx="4" fill="#E4DCCE"></rect>
+        </svg>

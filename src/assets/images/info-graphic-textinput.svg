@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="83" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="640" height="400">
+          <rect data-dc-tpl="84" width="320" height="200" fill="#FFFDF8"></rect>
+          <rect data-dc-tpl="85" x="70" y="60" width="56" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="86" x="70" y="80" width="180" height="50" rx="12" fill="#FFFDF8" stroke="#2F7D86" stroke-width="3"></rect>
+          <rect data-dc-tpl="87" x="88" y="101" width="68" height="8" rx="4" fill="#C9C0B1"></rect>
+          <rect data-dc-tpl="88" x="163" y="92" width="3" height="26" rx="1.5" fill="#2F7D86"></rect>
+        </svg>
