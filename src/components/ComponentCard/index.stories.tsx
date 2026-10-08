@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/tanstack-react";
 import { ComponentCard } from ".";
+import buttonImage from "../../assets/images/info-graphic-button.svg?url";
 
 const meta = {
   title: "ComponentCard",
@@ -22,8 +23,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    imageUrl: "https://placehold.jp/150x150.png",
+    imageUrl: buttonImage,
     name: "コンポーネント名",
     description: "コンポーネント説明コンポーネント説明コンポーネント説明コンポーネント説明。",
+  },
+};
+
+export const ComingSoon: Story = {
+  args: {
+    ...Default.args,
+    comingSoon: true,
   },
 };
