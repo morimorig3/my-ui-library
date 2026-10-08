@@ -1,9 +1,30 @@
+import type { MouseEvent } from "react";
 import svgImage from "./paper-plane.svg?url";
 import styles from "./styles.module.css";
 
-export const Hero = () => {
+type Props = {
+  /** スクロールの案内を押したときに移る先の id */
+  nextId: string;
+};
+
+export const Hero = ({ nextId }: Props) => {
+  // Chrome では、スナップが mandatory のときに届かない位置へなめらかにスクロールさせると、
+  // まったく動かない。一覧が短いと一番上を画面の上端まで持ってこられないので、
+  // 届く位置に丸めてから自分でスクロールさせる
+  const scrollToNext = (event: MouseEvent<HTMLAnchorElement>) => {
+    const target = document.getElementById(nextId);
+    if (!target) return;
+    event.preventDefault();
+    const root = document.documentElement;
+    const top = Math.min(
+      target.getBoundingClientRect().top + window.scrollY,
+      root.scrollHeight - window.innerHeight,
+    );
+    window.scrollTo({ top });
+  };
+
   return (
-    <section>
+    <section className={styles.section}>
       <div className={styles.hero}>
         <div className={styles.sky} aria-hidden="true">
           <span className={`${styles.cloud} ${styles.cloud1}`} />
@@ -35,18 +56,24 @@ export const Hero = () => {
         </span>
       </div>
       <p className="font-kiwi-maru text-[46px] text-center text-text-black">
-        触っていて、
+        使うたびに、
         <br />
-        気持ちのいいUIを集めました。
+        ちょっと好きになるUI
       </p>
       <p className="text-center leading-loose">
-        押した、選べた、書けた。
+        押したときや選んだときの小さな気持ちよさ。
         <br />
-        そのときの小さな心地よさがどこから来るのかを、
-        <br />
-        実際に触りながら確かめられるサイトです。
+        その理由を触りながらたしかめる場所です。
       </p>
-      <span>気になる部品をひとつ</span>
+      <a
+        href={`#${nextId}`}
+        className={styles.scrollCue}
+        onClick={scrollToNext}
+        aria-label="部品の一覧へ"
+      >
+        <span className={styles.scrollLabel}>scroll</span>
+        <span className={styles.scrollLine} aria-hidden="true" />
+      </a>
     </section>
   );
 };
