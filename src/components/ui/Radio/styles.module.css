@@ -1,0 +1,124 @@
+/* 押せる範囲は、丸だけでなくラベルの行全体 */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 12px 0 10px;
+  border-radius: 10px;
+  color: #2e2a26;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.15s ease;
+
+  &:has(.input:disabled) {
+    color: #a39a8d;
+    cursor: not-allowed;
+  }
+}
+
+.circle {
+  position: relative;
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+}
+
+/* 本物の input をそのまま丸として描く */
+.input {
+  grid-area: 1 / 1;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border: 2px solid #6f675e;
+  border-radius: 50%;
+  background-color: #fffdf8;
+  appearance: none;
+  cursor: inherit;
+  transition:
+    background-color 0.12s ease,
+    border-color 0.12s ease;
+
+  &:checked {
+    border-color: #2f7d86;
+  }
+
+  /* キーボード操作のときだけリングを出す */
+  &:focus-visible {
+    outline: 3px solid #22636b;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    border-color: #cfc6b8;
+    background-color: #f1ece1;
+  }
+
+  &:disabled:checked {
+    border-color: #c4baab;
+  }
+}
+
+/* 中の点。選んだとたんに広がり始め、外れるときはすぐ消す */
+.dot {
+  grid-area: 1 / 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2f7d86;
+  pointer-events: none;
+  transform: scale(0);
+}
+
+.input:checked ~ .dot {
+  transform: scale(1);
+  transition: transform 0.14s ease-out;
+}
+
+.input:disabled ~ .dot {
+  background-color: #c4baab;
+}
+
+/* マウスなどホバーできる環境だけで反応させる */
+@media (hover: hover) {
+  .label:hover:not(:has(.input:disabled)) {
+    background-color: #eaf3f4;
+
+    .input:not(:checked) {
+      border-color: #2e2a26;
+    }
+
+    .input:checked {
+      border-color: #22636b;
+    }
+  }
+}
+
+/* 押している間は、丸の中を少し濃くする */
+.label:active:not(:has(.input:disabled)) {
+  .input:not(:checked) {
+    background-color: #bfd8db;
+  }
+
+  .input:checked {
+    border-color: #1b4f55;
+    background-color: #bfd8db;
+  }
+
+  .input:checked ~ .dot {
+    background-color: #1b4f55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .input,
+  .input:checked ~ .dot {
+    transition: none;
+  }
+}
