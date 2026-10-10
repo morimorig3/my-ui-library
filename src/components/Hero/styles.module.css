@@ -194,10 +194,8 @@
   }
 }
 
-/* トップだけ、リードまでを 1 画面に収めてスナップさせる。
-   一覧の ul にも snap-start を付けて、Hero と一覧の 2 か所で止まるようにする */
+/* スクロールの案内を押したとき、一覧までなめらかに移る */
 :global(html):has(.section) {
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -210,8 +208,6 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 96px;
-  scroll-margin-top: 88px;
-  scroll-snap-align: start;
 }
 
 /* 下に続きがあることを伝える案内。押すと一覧へ移る */

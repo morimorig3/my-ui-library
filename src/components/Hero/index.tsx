@@ -1,4 +1,3 @@
-import type { MouseEvent } from "react";
 import svgImage from "./paper-plane.svg?url";
 import styles from "./styles.module.css";
 
@@ -8,21 +7,6 @@ type Props = {
 };
 
 export const Hero = ({ nextId }: Props) => {
-  // Chrome では、スナップが mandatory のときに届かない位置へなめらかにスクロールさせると、
-  // まったく動かない。一覧が短いと一番上を画面の上端まで持ってこられないので、
-  // 届く位置に丸めてから自分でスクロールさせる
-  const scrollToNext = (event: MouseEvent<HTMLAnchorElement>) => {
-    const target = document.getElementById(nextId);
-    if (!target) return;
-    event.preventDefault();
-    const root = document.documentElement;
-    const top = Math.min(
-      target.getBoundingClientRect().top + window.scrollY,
-      root.scrollHeight - window.innerHeight,
-    );
-    window.scrollTo({ top });
-  };
-
   return (
     <section className={styles.section}>
       <div className={styles.hero}>
@@ -65,12 +49,7 @@ export const Hero = ({ nextId }: Props) => {
         <br />
         その理由を触りながらたしかめる場所です。
       </p>
-      <a
-        href={`#${nextId}`}
-        className={styles.scrollCue}
-        onClick={scrollToNext}
-        aria-label="部品の一覧へ"
-      >
+      <a href={`#${nextId}`} className={styles.scrollCue} aria-label="部品の一覧へ">
         <span className={styles.scrollLabel}>scroll</span>
         <span className={styles.scrollLine} aria-hidden="true" />
       </a>
