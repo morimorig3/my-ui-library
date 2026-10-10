@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeading } from "../components/layouts/SectionHeading";
-import { Hero } from "../components/Hero";
+import { Hero, type Artwork, type GalleryWork } from "../components/Hero";
 import { ComponentCard } from "../components/ComponentCard";
 import buttonImage from "../assets/images/info-graphic-button.svg?url";
 import checkboxImage from "../assets/images/info-graphic-checkbox.svg?url";
@@ -47,6 +47,8 @@ type Item = {
   description: string;
   /** 解説ページがあるときだけ渡す。ないものは準備中のカードになる */
   to?: "/ui/button" | "/ui/checkbox" | "/ui/radio" | "/ui/select";
+  /** トップの回廊に飾るときの額。渡したものだけが回廊に並ぶ */
+  artwork?: Artwork;
 };
 
 type Group = {
@@ -70,23 +72,27 @@ const groups: Group[] = [
         name: "ボタン",
         description: "「押せる感」「押した感」を与えるには。",
         to: "/ui/button",
+        artwork: { width: 16, height: 12, frame: "dark", picture: "button" },
       },
       {
         imageUrl: checkboxImage,
         name: "チェックボックス",
         description: "選んだことが、ひと目で伝わるには。",
         to: "/ui/checkbox",
+        artwork: { width: 12, height: 15, frame: "wood", picture: "checkbox" },
       },
       {
         imageUrl: radioImage,
         name: "ラジオボタン",
         description: "ひとつだけ選ぶ感じが、わかりやすくなるには。",
         to: "/ui/radio",
+        artwork: { width: 14, height: 14, frame: "cream", picture: "radio" },
       },
       {
         imageUrl: toggleImage,
         name: "トグルスイッチ",
         description: "いまオンかオフか、迷わずわかるには。",
+        artwork: { width: 13, height: 10, frame: "wood", picture: "toggle" },
       },
       {
         imageUrl: chipImage,
@@ -116,11 +122,13 @@ const groups: Group[] = [
         name: "セレクトボックス",
         description: "たたんだ一覧から、迷わず選べるには。",
         to: "/ui/select",
+        artwork: { width: 13, height: 16, frame: "cream", picture: "select" },
       },
       {
         imageUrl: sliderImage,
         name: "スライダー",
         description: "動かしながら、ちょうどいい値を選べるには。",
+        artwork: { width: 17, height: 11, frame: "dark", picture: "slider" },
       },
       {
         imageUrl: textareaImage,
@@ -276,10 +284,15 @@ const groups: Group[] = [
   // },
 ];
 
+// 番号はカード一覧での並び順。額の設定があるものだけを回廊に飾る
+const galleryWorks: GalleryWork[] = groups
+  .flatMap((group) => group.items)
+  .flatMap(({ name, artwork }, index) => (artwork ? [{ no: index + 1, name, artwork }] : []));
+
 function IndexPage() {
   return (
     <div>
-      <Hero nextId="ui-list" />
+      <Hero nextId="ui-list" works={galleryWorks} />
       <div id="ui-list" className="grid gap-y-20 max-w-215 mx-auto py-16">
         {groups.map((group) => (
           <section key={group.id}>
